@@ -9,8 +9,8 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 
 # သင့် Group ID နှင့် Topic ID
-ALLOWED_GROUP_ID = -1003878813406
-ALLOWED_TOPIC_ID = 506
+ALLOWED_GROUP_ID = -1004424706597
+ALLOWED_TOPIC_ID = 2
 
 # Render တွင် Bot အိပ်မသွားစေရန် Web Server အသေးစားဖန်တီးခြင်း
 app = Flask(__name__)
