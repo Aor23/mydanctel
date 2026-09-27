@@ -61,4 +61,4 @@ if __name__ == "__main__":
     
     print("Bot is running in specific topic...")
     # Timeout ပြဿနာကို ကာကွယ်ရန် အချိန်တိုးထားခြင်း
-    bot.infinity_polling(timeout=60, request_timeout=90)
+    bot.infinity_polling(timeout=60)
