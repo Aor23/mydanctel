@@ -52,7 +52,16 @@ def auto_reply(message):
         reply_text = "ဆာဗာချိတ်ဆက်မှု အနည်းငယ် နှေးနေပါတယ်။ ခဏနေမှ ထပ်မေးကြည့်ပါဗျာ။"
         
     # သက်ဆိုင်ရာ Topic ထဲသို့သာ အလိုအလျောက် ပြန်လည်ပေးပို့မည်[cite: 2]
-    bot.reply_to(message, reply_text)
+        # Telegram ၏ စာလုံးရေကန့်သတ်ချက် (4000) ကျော်ပါက အပိုင်းလိုက် ခွဲပြီးပို့ရန်
+    max_length = 4000
+    for i in range(0, len(reply_text), max_length):
+        bot.send_message(
+            chat_id=message.chat.id,
+            text=reply_text[i:i+max_length],
+            reply_to_message_id=message.message_id,
+            message_thread_id=message.message_thread_id
+        )
+
 
 if __name__ == "__main__":
     print("Starting web server...")
